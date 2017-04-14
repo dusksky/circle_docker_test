@@ -1,7 +1,9 @@
 <?php
+use PHPUnit\Framework\TestCase;
+
 include_once('sample.php');
 
-class HelloTest extends PHPUnit_Framework_TestCase
+class HelloTest extends TestCase
 {
     private $msg;
 
