@@ -16,6 +16,10 @@ machine:
 
 dependencies:
   pre:
+    - pear channel-update pear.php.net
+    - pear upgrade pear
+    - pear config-set auto_discover 1
+    - pear install pear.phpunit.de/PHPUnit-3.7.32
     - echo "memory_limit = 64M" > /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini
 
 test:
