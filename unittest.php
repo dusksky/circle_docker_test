@@ -1,5 +1,4 @@
 <?php
-include_once('PHPUnit/Autoload.php');
 include_once('sample.php');
 
 class HelloTest extends \PHPUnit_Framework_TestCase
