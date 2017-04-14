@@ -1,0 +1,25 @@
+machine:
+  timezone:
+    Asia/Tokyo
+
+  php:
+    version:
+       7.1.3
+
+  # Override /etc/hosts
+  hosts:
+    dlsoft.dmm.com: 127.0.0.1
+
+  # Add some environment variables
+  environment:
+    LARAVEL_ENV: test
+
+dependencies:
+  pre:
+    - echo "memory_limit = 64M" > /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini
+
+test:
+  override:
+    - ./my_testing_script.sh
+
+
